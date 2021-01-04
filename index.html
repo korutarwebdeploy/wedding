@@ -89,6 +89,27 @@
             transform: translate(-50%,-50%);
             -ms-transform: translate(-50%,-50%);
         }
+
+        #button {
+            transition-duration: 0.4s;
+            border: 5px solid #D30101;
+            background-color: #D30101;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 15px;
+            box-shadow: 0 3px #999;
+        }
+
+        #button:hover {
+            border: 5px solid #FF9E9E;
+            background-color: #FF9E9E;
+        }
+
+        #button:active {
+            background-color: #FF9E9E;
+            box-shadow: 0 5px #666;
+            transform: translateY(3px);
+        }
 	</style>
 	<title>Kor & Skinnie's Marriage</title>
 </head>
@@ -112,7 +133,7 @@
 		</div>
 	</div>
 	<div class="btnCentre">
-		<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#parents" style="border:5px solid #D30101; background-color:#D30101">家长名字 Show More</button>
+		<button id="button" type="button" class="btn btn-info" data-toggle="collapse" data-target="#parents">家长名字 Show More</button>
 	</div>
 	<div id="parents" class="divCentre collapse">
 		<div class="left inline">
