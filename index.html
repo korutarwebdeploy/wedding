@@ -65,6 +65,30 @@
 			border: 2px solid #FF5353;
 			padding: 5px;
 		}
+
+        #overlay {
+            position: fixed;
+            display: none;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 2;
+            cursor: pointer;
+        }
+
+        #text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-size: 50px;
+            color: white;
+            transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+        }
 	</style>
 	<title>Kor & Skinnie's Marriage</title>
 </head>
@@ -112,12 +136,15 @@
 		</div>
 	</div>
 	<br />
+	<div id="overlay" onclick="off()">
+		<div id="text"><h4>随意按任何部位关闭窗户 Click anywhere to close the window</h4><br />暂时还没有拿到影片，非常抱歉 We haven't get our video yet, so sorry</div>
+	</div>
 	<div data-aos="fade-left" class="boxNote">
 		<div class="boxBorder">
 			<div href="#phrase2" data-toggle="collapse">
 				<h1 class="words">我们美美的婚纱照！ Our beautiful wedding photos!</h1> <p>按我查阅详情 Click me for more info</p>
 			</div>
-			<p id="phrase2" class="collapse words">有兴趣想观赏我们婚纱照的亲戚朋友们，记得留守我们的面子书Facebook更新哦！（新郎：<a href="https://web.facebook.com/Cokok0r/">Chew Siak Kor</a>；新娘：<a href="https://web.facebook.com/skinnie.poon">Skinnie Poon</a>）<br />Dear all relatives and friends, if you would like to find out more on our wedding photographs, please keep in touch with us on Facebook to find out more (bridegroom: <a href="https://web.facebook.com/Cokok0r/">Chew Siak Kor</a>; bride: <a href="https://web.facebook.com/skinnie.poon">Skinnie Poon</a>)</p>
+			<p id="phrase2" class="collapse words">有兴趣想观赏我们婚纱照的亲戚朋友们，记得留守我们的面子书Facebook更新哦！（新郎：<a href="https://web.facebook.com/Cokok0r/">Chew Siak Kor</a>；新娘：<a href="https://web.facebook.com/skinnie.poon">Skinnie Poon</a>）<a onclick="on()">又或者可以直接点击我来看我们的婚纱照短片</a><br />Dear all relatives and friends, if you would like to find out more on our wedding photographs, please keep in touch with us on Facebook to find out more (bridegroom: <a href="https://web.facebook.com/Cokok0r/">Chew Siak Kor</a>; bride: <a href="https://web.facebook.com/skinnie.poon">Skinnie Poon</a>) <a onclick="on()">or click me to watch our wedding photo video clip</a></p>
 		</div>
 	</div>
 	<br />
@@ -149,5 +176,14 @@
 		</div>
 	</div>
 	<br />
+	<script>
+		function on() {
+			document.getElementById("overlay").style.display = "block";
+		}
+
+		function off() {
+			document.getElementById("overlay").style.display = "none";
+		}
+	</script>
 </body>
 </html>
